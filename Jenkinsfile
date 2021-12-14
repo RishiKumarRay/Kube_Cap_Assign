@@ -1,9 +1,9 @@
 pipeline{
     agent any
-   /* environment {
+    environment {
         dockerhub=credentials('dockerhub')
         
-    } */
+    } 
     stages{
         stage('clean')
         {
@@ -30,28 +30,28 @@ pipeline{
         }
 
        
-      /*  stage('build image')
+        stage('build image')
         {
             when{
-                branch "prod"
+                branch "Production"
                 }
             steps{
-                sh 'docker build -t capstone-img:1.01 .'
+                sh 'docker build -t myimage:1.01 .'
             }
         } 
 
         stage('pushing to dockerhub')
         {
             when{
-                branch "prod"
+                branch "Production"
                 }
             steps{
-                sh 'docker tag capstone-img:1.01 rishivantsingh9717/capstone:1.01 '
+                sh 'docker tag myimage:1.01 rishiray/springboot:1.01'
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
 
-                sh 'docker push rishivantsingh9717/capstone:1.01 '
+                sh 'docker push rishiray/springboot:1.01'
             }
-        } */
+        } 
 
     }
 }
