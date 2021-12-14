@@ -46,10 +46,10 @@ pipeline{
                 branch "Production"
                 }
             steps{
-                sh 'docker tag myimage:1.01 rishirai/springboot:1.01'
+                sh 'docker tag myimage:1.01 rishiray/springboot:1.01'
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
 
-                sh 'docker push rishirai/springboot:1.01'
+                sh 'docker push rishiray/springboot:1.01'
             }
         } 
 
