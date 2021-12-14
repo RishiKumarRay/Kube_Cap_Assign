@@ -22,7 +22,7 @@ pipeline{
         stage('pack')
         {
             when{
-                branch "prod"
+                branch "Production"
                 }
             steps{
                 sh 'mvn package'
