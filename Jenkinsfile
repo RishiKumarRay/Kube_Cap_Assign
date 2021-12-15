@@ -52,6 +52,17 @@ pipeline{
                 sh 'docker push rishiray/springboot:1.01'
             }
         } 
+        stage('deploy')
+        {
+             when{
+                branch "Production"
+                }
+            steps{
+                script{
+                    kubernetesDeploy configs: '**/deploy.yml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+                }
+            }
+        }
 
     }
 }
