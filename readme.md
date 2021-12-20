@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Production ready Starter-kit for Spring Boot applications.</h4>
+<h4 align="center">Production is getting ready Starter-kit for Spring Boot applications.</h4>
 
 <p align="center">
     <a alt="Java">
@@ -424,4 +424,4 @@ Here are the various screens of the Admin portal that you should be able to use 
 [Arpit Khandelwal](https://www.linkedin.com/in/arpitkhandelwal1984/)
 
 ## License ##
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the MIT license. hello, how are 
