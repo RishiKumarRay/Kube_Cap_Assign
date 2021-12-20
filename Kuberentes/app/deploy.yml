@@ -20,7 +20,7 @@ spec:
         - containerPort: 8080
         env:
           - name: MONGODB_HOST
-            value: "mongodb-0.mongodb"
+            value: "mongodb-1.mongodb"
           - name: MONGODB_PORT
             value: "27017"
 
